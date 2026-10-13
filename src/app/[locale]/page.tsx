@@ -2,9 +2,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 
 import { LanguageSwitcher } from "@/components/language-switcher";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { MapView } from "@/features/map/map-view";
 import { Link } from "@/i18n/navigation";
+import { MapClient } from "./map-client";
 
 export default async function HomePage({
   params,
@@ -25,9 +24,6 @@ export default async function HomePage({
           <p className="text-muted-foreground truncate text-xs">{t("subtitle")}</p>
         </div>
         <div className="flex items-center gap-2">
-          <Button variant="outline" size="sm" disabled title={tf("soon")}>
-            {t("useMyLocation")}
-          </Button>
           <LanguageSwitcher />
         </div>
       </header>
@@ -38,11 +34,8 @@ export default async function HomePage({
         <span className="text-muted-foreground text-xs">{tf("soon")}</span>
       </div>
 
-      <section
-        className="relative min-h-[60vh] flex-1"
-        aria-label={t("title")}
-      >
-        <MapView />
+      <section className="relative min-h-[60vh] flex-1">
+        <MapClient />
       </section>
 
       <footer className="text-muted-foreground flex items-center justify-between gap-2 border-t px-4 py-2 text-xs">

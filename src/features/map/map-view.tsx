@@ -8,7 +8,16 @@ import { mapConfig, mapStyleUrl } from "@/lib/config";
 
 import "maplibre-gl/dist/maplibre-gl.css";
 
-export function MapView() {
+export interface MapViewport {
+  center: [number, number];
+  zoom: number;
+}
+
+export function MapView({
+  viewport = { center: mapConfig.center, zoom: mapConfig.zoom },
+}: {
+  viewport?: MapViewport;
+}) {
   const t = useTranslations("Home");
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
@@ -16,7 +25,7 @@ export function MapView() {
   const hasKey = Boolean(mapConfig.key);
 
   useEffect(() => {
-    if (!hasKey || !containerRef.current || mapRef.current) {
+    if (!containerRef.current || mapRef.current) {
       return;
     }
 
@@ -32,8 +41,8 @@ export function MapView() {
         instance = new maplibregl.Map({
           container: containerRef.current,
           style: mapStyleUrl(),
-          center: mapConfig.center,
-          zoom: mapConfig.zoom,
+          center: viewport.center,
+          zoom: viewport.zoom,
           attributionControl: { compact: true },
         });
         instance.addControl(
@@ -42,7 +51,7 @@ export function MapView() {
         );
         mapRef.current = instance;
       } catch {
-        setError(true);
+        if (!disposed) setError(true);
       }
     })();
 
@@ -51,7 +60,14 @@ export function MapView() {
       instance?.remove();
       mapRef.current = null;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hasKey]);
+
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || map.isMoving()) return;
+    map.easeTo({ center: viewport.center, zoom: viewport.zoom, duration: 600 });
+  }, [viewport]);
 
   if (!hasKey || error) {
     return (
