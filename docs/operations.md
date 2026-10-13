@@ -67,3 +67,11 @@ Deploy, observabilidade, revalidação e custos.
 | Bar incorreto reportado | corrigir via `/admin`; registrar em `removal_requests` |
 | Vazamento de chave | rotacionar no provedor; revisar logs |
 | Free tier estourando | reduzir fotos (comprimir), revisar cota de tiles |
+
+
+## 9. Storage (fotos)
+
+- **Bucket recomendado:** `bar-media` (Supabase Storage). 
+- Público com cuidado: preferir URLs assinadas ou políticas RLS por caminho.
+- Upload via painel admin (Server Actions) — Fase 1.
+- Cloudflare R2 é alternativa caso Supabase Storage atinja limites (não necessário no MVP).
