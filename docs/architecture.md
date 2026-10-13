@@ -4,12 +4,12 @@
 
 ## 1. Visão geral
 
-Aplicação **SPA** (React + Vite + TS) que consome diretamente o **Supabase**
+Aplicação **Next.js 15 (App Router) + TypeScript** que consome diretamente o **Supabase**
 (Postgres via PostgREST, Auth e Storage). Não há backend próprio no MVP.
 
 ```mermaid
 flowchart LR
-    U[Usuário / Turista] --> FE[React SPA]
+    U[Usuário / Turista] --> FE[Next.js App]
     A[Admin / Dev] --> FE
     FE -->|supabase-js| SB[(Supabase)]
     FE -->|tiles + geocoding| MT[MapTiler]
