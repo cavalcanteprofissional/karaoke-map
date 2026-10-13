@@ -61,12 +61,12 @@ Ver [`docs/roadmap.md`](./docs/roadmap.md) para critérios de aceite.
 
 | Camada | Escolha |
 |---|---|
-| Frontend | React + Vite + TypeScript |
+| Frontend | Next.js 15 (App Router) + TypeScript |
 | Mapa | MapLibre GL JS (tiles MapTiler) |
-| Intro | Globe.gl (apenas abertura/branding) |
+| Intro | — (removido) |
 | Backend / DB | Supabase (Postgres + Auth + REST + Storage) |
 | Auth | Supabase Auth — 1 conta admin |
-| i18n | i18next (PT/EN) |
+| i18n | next-intl (PT/EN) |
 | Geocoding | MapTiler Geocoding (fallback Nominatim) |
 | Hospedagem | Vercel / Cloudflare Pages |
 | Qualidade | Vitest, Testing Library, Playwright, ESLint, Prettier |
