@@ -1,0 +1,54 @@
+# Licença dos Dados (Data License)
+
+Copyright (c) 2026 Karaokê Map. Todos os direitos reservados.
+
+Esta licença aplica-se ao **conjunto de dados curado** deste projeto —
+incluindo, exemplificativamente: registros de bares (`bars`), horários
+(`bar_hours`), eventos de karaokê (`bar_events`), fontes (`bar_sources`),
+mídias (`bar_media`) e qualquer dado derivado de coleta ou curadoria.
+
+O **código-fonte** é licenciado sob MIT (ver [LICENSE](LICENSE)). Esta licença
+de dados **não** se estende ao código.
+
+## 1. Restrições
+
+Sem autorização prévia e por escrito do responsável, é **vedado**:
+
+- Redistribuir, revender ou sublicenciar o conjunto de dados.
+- Publicar cópias substanciais dos dados em outros serviços.
+- Utilizar os dados para treinar modelos de machine learning.
+- Realizar scraping em massa da aplicação ou de suas APIs.
+
+## 2. Usos permitidos
+
+- Consulta pessoal pela aplicação pública.
+- Citação acadêmica com atribuição ("Karaokê Map", 2026).
+- Uso interno privado, sem redistribuição.
+
+## 3. Atribuição
+
+Qualquer uso permitido deve creditar: **"Fonte: Karaokê Map (2026)"**.
+
+## 4. Dados de terceiros
+
+Parte dos dados pode derivar de fontes de terceiros (ex.: OpenStreetMap,
+perfis públicos, APIs oficiais). Tais dados permanecem sujeitos às licenças e
+aos termos de seus respectivos provedores, que prevalecem sobre esta licença.
+
+## 5. Dados pessoais e LGPD
+
+- Dados de estabelecimentos e perfis públicos são tratados sob base legal de
+  interesse legítimo, com finalidade informativa.
+- Qualquer titular ou estabelecimento pode solicitar remoção, correção ou
+  oposição ao tratamento. Ver [`docs/lgpd.md`](docs/lgpd.md) e o contato em
+  [`SECURITY.md`](SECURITY.md).
+
+## 6. Isenção de garantias
+
+Os dados são fornecidos **"no estado em que se encontram"**, sem garantia de
+exatidão, completude ou atualidade. O responsável não se responsabiliza por
+decisões tomadas com base nestes dados.
+
+## 7. Contato
+
+Para licenciamento ou solicitações: ver contato em [`SECURITY.md`](SECURITY.md).

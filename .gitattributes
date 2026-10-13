@@ -1,0 +1,23 @@
+# Normaliza finais de linha (evita ruído CRLF/LF entre Windows/Linux/macOS)
+* text=auto eol=lf
+
+# Binários
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+
+# Linguagens
+*.md text
+*.ts text
+*.tsx text
+*.js text
+*.json text
+*.sql text
+
+# Diff legível
+*.sql linguist-language=SQL
