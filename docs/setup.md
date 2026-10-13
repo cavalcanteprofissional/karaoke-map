@@ -42,7 +42,7 @@ npm run dev               # http://localhost:5173
 
 1. Criar projeto no painel Supabase (região mais próxima).
 2. Aplicar migrations (SQL Editor ou CLI).
-3. Popular com `0009_seed_dev.sql`.
+3. Popular com seed local (separado): `npm run db:migrate -- --seed`.
 
 ### Opção B — ambiente local
 
@@ -50,7 +50,7 @@ npm run dev               # http://localhost:5173
 npm i -g supabase
 supabase init
 supabase start            # sobe Postgres/Auth/Storage locais
-supabase db reset         # aplica migrations + seed
+npm run db:migrate -- --seed  # aplica migrations + seed local
 ```
 
 ### Migrations
