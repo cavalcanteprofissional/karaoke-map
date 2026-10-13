@@ -9,6 +9,13 @@ build/
 out/
 .vite/
 
+# Next.js
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.vercel
+.turbo/
+
 # Environment
 .env
 .env.local

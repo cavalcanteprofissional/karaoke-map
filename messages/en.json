@@ -1,0 +1,39 @@
+{
+  "Metadata": {
+    "title": "Karaoke Map — karaoke bars in Fortaleza",
+    "description": "Discover karaoke bars in Fortaleza and the Metropolitan Region. Location, opening hours, and open-now and karaoke-today filters."
+  },
+  "Home": {
+    "title": "Karaoke Map",
+    "subtitle": "Find where to sing karaoke now in Fortaleza",
+    "searchPlaceholder": "Search address...",
+    "useMyLocation": "Use my location",
+    "loading": "Loading map…",
+    "mapError": "Could not load the map."
+  },
+  "Filters": {
+    "openNow": "Open now",
+    "karaokeToday": "Karaoke today",
+    "distance": "Distance",
+    "km5": "5 km",
+    "km10": "10 km",
+    "km20": "20 km",
+    "soon": "Coming soon"
+  },
+  "Privacy": {
+    "title": "Removal and Privacy Policy",
+    "intro": "This project handles only public data about venues and public profiles, for informational purposes, under the legal basis of legitimate interest (LGPD, art. 7, IX — Brazilian data protection law).",
+    "removalTitle": "Request removal, correction, or objection",
+    "removalIntro": "Any venue or person may request full or partial removal by emailing: venue name or profile handle, the map URL, and the request type below.",
+    "optionFull": "Full removal (data deleted, 5 business days)",
+    "optionCorrection": "Correction (7 business days)",
+    "optionOptOut": "Objection to processing (immediate)",
+    "deadline": "Response deadline: 15 calendar days (LGPD art. 19).",
+    "contactLabel": "Contact",
+    "footerSource": "Data source: human curation (and, in the future, automated collection)."
+  },
+  "Common": {
+    "backToMap": "Back to map",
+    "language": "Language"
+  }
+}

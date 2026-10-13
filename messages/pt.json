@@ -1,0 +1,39 @@
+{
+  "Metadata": {
+    "title": "Karaokê Map — bares com karaokê em Fortaleza",
+    "description": "Descubra bares com karaokê em Fortaleza e Região Metropolitana. Localização, horários e filtros de aberto agora e karaokê hoje."
+  },
+  "Home": {
+    "title": "Karaokê Map",
+    "subtitle": "Encontre onde cantar karaokê agora em Fortaleza",
+    "searchPlaceholder": "Buscar endereço...",
+    "useMyLocation": "Usar minha localização",
+    "loading": "Carregando mapa…",
+    "mapError": "Não foi possível carregar o mapa."
+  },
+  "Filters": {
+    "openNow": "Aberto agora",
+    "karaokeToday": "Karaokê hoje",
+    "distance": "Distância",
+    "km5": "5 km",
+    "km10": "10 km",
+    "km20": "20 km",
+    "soon": "Em breve"
+  },
+  "Privacy": {
+    "title": "Política de Remoção e Privacidade",
+    "intro": "Este projeto trata exclusivamente dados públicos de estabelecimentos e perfis públicos, com finalidade informativa, sob a base legal de interesse legítimo (LGPD, art. 7º, IX).",
+    "removalTitle": "Solicitar remoção, correção ou oposição",
+    "removalIntro": "Qualquer estabelecimento ou pessoa pode solicitar remoção total ou parcial enviando e-mail com: nome do estabelecimento ou @ do perfil, URL no mapa e o tipo de solicitação abaixo.",
+    "optionFull": "Remoção total (dados apagados, 5 dias úteis)",
+    "optionCorrection": "Correção (7 dias úteis)",
+    "optionOptOut": "Oposição ao tratamento (imediato)",
+    "deadline": "Prazo de resposta: 15 dias corridos (LGPD art. 19).",
+    "contactLabel": "Contato",
+    "footerSource": "Fonte dos dados: curadoria humana (e, futuramente, coleta automatizada)."
+  },
+  "Common": {
+    "backToMap": "Voltar ao mapa",
+    "language": "Idioma"
+  }
+}
