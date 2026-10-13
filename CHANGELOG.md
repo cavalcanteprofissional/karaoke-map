@@ -13,6 +13,14 @@ Tipos de mudança: `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Securi
 
 ### Added
 
+- (nada ainda)
+
+---
+
+## [0.2.0] - 2026-10-13
+
+### Added
+
 - Documentação de implementação completa em `docs/`:
   - `architecture.md`, `data-model.md`, `design-system.md`, `testing.md`,
     `setup.md`, `lgpd.md`, `roadmap.md`, `operations.md`, `scraping.md`, `decisions.md`.
@@ -40,5 +48,6 @@ Tipos de mudança: `Added`, `Changed`, `Deprecated`, `Removed`, `Fixed`, `Securi
 - Documento de planejamento inicial (`plan.md`): visão, escopo, LGPD, coleta de
   dados, modelagem, frontend, stack, riscos, roadmap e próximos passos.
 
-[Unreleased]: https://example.com/compare/v0.1.0...HEAD
-[0.1.0]: https://example.com/releases/tag/v0.1.0
+[Unreleased]: https://github.com/cavalcanteprofissional/karaoke-map/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/cavalcanteprofissional/karaoke-map/releases/tag/v0.2.0
+[0.1.0]: https://github.com/cavalcanteprofissional/karaoke-map/releases/tag/v0.1.0
