@@ -1,11 +1,4 @@
-
-export default async function AdminPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
-  
-
+export default async function AdminPage() {
   return (
     <div className="space-y-4">
       <h2 className="text-lg font-medium">Painel de administração</h2>
