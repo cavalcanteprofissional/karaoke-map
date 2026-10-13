@@ -12,7 +12,7 @@ Status: **Aceito** · **Proposto** · **Substituído**.
 **Motivo:** mapa 2D é muito superior a street-level, mais leve no mobile e mais rápido de construir.
 **Consequências:** menos "wow", UX melhor; Globe.gl fica opcional (ver ADR-002).
 
-## ADR-002 — Globo-intro: manter ou cortar · **Proposto**
+## ADR-002 — Globo-intro: manter ou cortar · **Substituído**
 
 **Decisão pendente:** manter protótipo de 1 dia do globo-intro **ou** splash estático.
 **Critério:** custo × valor percebido; validar performance em mobile.
@@ -35,9 +35,9 @@ Status: **Aceito** · **Proposto** · **Substituído**.
 **Motivo:** curadoria é o gargalo e o risco jurídico do scraping não compensa no início.
 **Consequências:** menor cobertura inicial; scrapers ganham *gate* jurídico.
 
-## ADR-006 — Geocoding: MapTiler com fallback Nominatim · **Proposto**
+## ADR-006 — Geocoding: MapTiler com fallback Nominatim · **Aceito**
 
-**Decisão pendente:** usar MapTiler Geocoding (mesma conta dos tiles) com fallback Nominatim.
+**Decisão:** usar MapTiler Geocoding (mesma conta dos tiles) com fallback Nominatim via Route Handler `/api/geocode`.
 **Motivo:** consolidar fornecedores; Nominatim público tem política de uso.
 **Consequências:** cota MapTiler compartilhada entre tiles e geocoding.
 
@@ -78,3 +78,38 @@ dados sob controle (restrições a redistribuição/treino de modelos).
 **Motivo:** ...
 **Consequências:** ...
 ```
+## ADR-011 — Next.js (App Router) no lugar de Vite SPA · Aceito
+
+**Contexto:** necessidade de SEO para descoberta ("karaokê em Fortaleza") e páginas indexáveis (bares/cidade).
+**Decisão:** Next.js 15 (App Router) + TypeScript.
+**Motivo:** SSG/SSR, rotas por locale, melhor deploy Vercel, SEO.
+**Consequências:** migração de SPA → App Router; uso de Server/Client Components e `@supabase/ssr`.
+
+## ADR-012 — Tailwind v4 + shadcn/ui · Aceito
+
+**Decisão:** Tailwind CSS v4 + shadcn/ui (base-nova) com tokens CSS (OKLCH).
+**Motivo:** acelera CRUD do admin, acessibilidade (Base UI), consistência de design.
+**Consequências:** tema dark por padrão, componentes sob `src/components/ui/`.
+
+## ADR-013 — npm como gerenciador de pacotes · Aceito
+
+**Decisão:** npm (vs pnpm/yarn).
+**Consequências:** `package-lock.json` versionado.
+
+## ADR-014 — Supabase Cloud (projeto dev) · Aceito
+
+**Decisão:** banco de desenvolvimento no Supabase Cloud.
+**Motivo:** mais simples, migrations via `DATABASE_URL` (Session pooler).
+**Consequências:** exige conexão com internet no dev.
+
+## ADR-015 — next-intl para i18n (PT/EN) · Aceito
+
+**Decisão:** `next-intl` com rotas `/[locale]` (`pt` padrão), `localePrefix: "always"`.
+**Motivo:** nativo ao App Router, SSG por locale, SEO multilíngue.
+**Substitui:** i18next (previsto na v0.2). Nomes de bares não traduzem.
+
+## ADR-016 — Corte do globo-intro (fecha ADR-002) · Aceito
+
+**Decisão:** não implementar Globe.gl na abertura. Começar direto no mapa 2D (MapLibre).
+**Motivo:** foco em produto, performance mobile, simplifica escopo.
+**Fecha:** ADR-002 → Aceito (cortado).

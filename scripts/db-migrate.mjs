@@ -6,6 +6,7 @@ import pg from "pg";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const migrationsDir = join(__dirname, "..", "supabase", "migrations");
+const seedsDir = join(__dirname, "..", "supabase", "seeds");
 const connectionString = process.env.DATABASE_URL;
 
 if (!connectionString) {
@@ -53,6 +54,21 @@ for (const file of files) {
   } catch (error) {
     await client.query("rollback");
     console.error(`failed ${file}:`, error.message);
+    await client.end();
+    process.exit(1);
+  }
+}
+
+// Apply seeds only if explicitly requested via --seed
+const applySeed = process.argv.includes("--seed");
+if (applySeed) {
+  const seedFile = join(seedsDir, "dev.sql");
+  try {
+    const seedSql = readFileSync(seedFile, "utf8");
+    console.log(`apply seed ${seedFile}`);
+    await client.query(seedSql);
+  } catch (error) {
+    console.error(`failed seed:`, error.message);
     await client.end();
     process.exit(1);
   }
